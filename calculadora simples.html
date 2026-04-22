@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora simples</title>
+    <script>
+        function somar() {
+            const n1 = parseFloat(document.getElementById("num1").value);
+            const n2 = parseFloat(document.getElementById("num2").value);
+
+            let resultado = n1 + n2;
+            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+        }
+
+        function subtrair() {
+            const n1 = parseFloat(document.getElementById("num1").value);
+            const n2 = parseFloat(document.getElementById("num2").value);
+
+            let resultado = n1 - n2;
+            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+        }
+
+        function multiplicar() {
+            const n1 = parseFloat(document.getElementById("num1").value);
+            const n2 = parseFloat(document.getElementById("num2").value);
+
+            let resultado = n1 * n2;
+            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+        }
+
+        function dividir() {
+            const n1 = parseFloat(document.getElementById("num1").value);
+            const n2 = parseFloat(document.getElementById("num2").value);
+
+            if (n2 === 0) {
+                document.getElementById("resultado").innerHTML = "Não é possível dividir por zero!";
+            } else {
+                let resultado = n1 / n2;
+                document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="num1" type="number" placeholder="Número 1">
+    <input id="num2" type="number" placeholder="Número 2">
+    <br><br>
+
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+
+    <div id="resultado">Resultado:</div>
+</body>
+</html>
