@@ -1,0 +1,32 @@
+Objetivo do teste:
+Validar as funcionalidades das operações básicas de uma calculadora, com objetivo de evitar erros e ou resultados errados.
+
+Metodologia do teste:
+Teste de caixa cinza, visando validar saídas, entradas e a lógica interna do código.
+
+Escopos e testes:
+Testar e validar o software, verificando suas operações de soma, subtração, divisão e multiplicação, corrigindo defeitos. 
+
+Tipos de teste aplicados:
+teste de unidade e teste funcional.
+
+Forma de execução:
+teste manual.
+
+Ambiente de teste:
+Vscode, internet.
+
+Papéis e responsabilidade:
+O Dev irá realizar os testes e inserir informações no relatório.
+
+Riscos e contingências:
+Fazer beckup mensalmente e executar os testes. 
+
+Ferramentas de teste:
+GitHub actions
+
+Metodologia de qualidade:
+Garantir que o software atenda aos requisitos funcionais e não funcionais, minimizando defeitos antes da entrega ao cliente.
+
+
+
