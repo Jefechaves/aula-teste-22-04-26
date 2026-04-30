@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora simples</title>
+
+    <script>
+        // ✅ FUNÇÕES PURAS (TESTÁVEIS)
+        function somarNumeros(a, b) {
+            return a + b;
+        }
+
+        function subtrairNumeros(a, b) {
+            return a - b;
+        }
+
+        function multiplicarNumeros(a, b) {
+            return a * b;
+        }
+
+        function dividirNumeros(a, b) {
+            if (b === 0) throw new Error("Divisão por zero");
+            return a / b;
+        }
+
+        // ✅ FUNÇÕES DA INTERFACE
+        function somar() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + somarNumeros(n1, n2);
+        }
+
+        function subtrair() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + subtrairNumeros(n1, n2);
+        }
+
+        function multiplicar() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + multiplicarNumeros(n1, n2);
+        }
+
+        function dividir() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+            try {
+                document.getElementById("resultado").innerHTML =
+                    "Resultado: " + dividirNumeros(n1, n2);
+            } catch (e) {
+                document.getElementById("resultado").innerHTML = e.message;
+            }
+        }
+
+        // ✅ FUNÇÃO DE TESTE
+        function testar(nome, fn) {
+            try {
+                fn();
+                console.log("✅", nome);
+            } catch (e) {
+                console.error("❌", nome, e.message);
+            }
+        }
+
+        // ✅ TESTE REAL
+        function rodarTestes() {
+            testar("Soma de positivos", () => {
+                if (somarNumeros(6, 4) !== 10) {
+                    throw new Error("Esperava 10");
+                }
+            });
+
+            testar("Subtração", () => {
+                if (subtrairNumeros(11, 1) !== 10) {
+                    throw new Error("Esperava 10");
+                }
+            });
+
+            testar("Multiplicação", () => {
+                if (multiplicarNumeros(2, 5) !== 10) {
+                    throw new Error("Esperava 10");
+                }
+            });
+
+            testar("Divisão", () => {
+                if (dividirNumeros(20, 2) !== 10) {
+                    throw new Error("Esperava 10");
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <input id="num1" type="number" placeholder="Número 1">
+    <input id="num2" type="number" placeholder="Número 2">
+    <br><br>
+
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="rodarTestes()">Testar</button>
+
+    <div id="resultado">Resultado:</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<style>
+  .caixa { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 2rem; max-width: 360px; margin: 2rem auto; }
+  h2 { font-size: 18px; font-weight: 500; margin: 0 0 1.5rem; color: var(--color-text-primary); }
+  label { font-size: 14px; color: var(--color-text-secondary); display: block; margin-bottom: 4px; }
+  input { width: 100%; box-sizing: border-box; margin-bottom: 1rem; }
+  button { width: 100%; padding: 10px; margin-top: 8px; }
+  #resultado { margin-top: 1rem; padding: 12px; border-radius: var(--border-radius-md); font-size: 14px; font-weight: 500; display: none; text-align: center; }
+  .sucesso { background: var(--color-background-success); color: var(--color-text-success); border: 0.5px solid var(--color-border-success); }
+  .erro { background: var(--color-background-danger); color: var(--color-text-danger); border: 0.5px solid var(--color-border-danger); }
+</style>
+
+<div class="caixa">
+  <h2>Login</h2>
+
+  <label for="usuario">Usuário</label>
+  <input type="text" id="usuario" placeholder="Digite o usuário" />
+
+  <label for="senha">Senha</label>
+  <input type="password" id="senha" placeholder="Digite a senha" />
+
+  <button onclick="fazerLogin()">Entrar</button>
+
+  <div id="resultado"></div>
+</div>
+
+<script>
+function fazerLogin() {
+  var usuarioCorreto = "senac";
+  var senhaCorreta = "2026";
+
+  var usuarioDigitado = document.getElementById("usuario").value;
+  var senhaDigitada = document.getElementById("senha").value;
+
+  var resultado = document.getElementById("resultado");
+  resultado.style.display = "block";
+
+  if (usuarioDigitado == usuarioCorreto && senhaDigitada == senhaCorreta) {
+    resultado.className = "sucesso";
+    resultado.innerHTML = "✓ Login realizado com sucesso!";
+  } else {
+    resultado.className = "erro";
+    resultado.innerHTML = "✗ Usuário ou senha incorretos.";
+  }
+}
+</script>

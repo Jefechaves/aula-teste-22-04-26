@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Calculadora simples</title>
     <script>
@@ -38,6 +39,62 @@
                 document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
             }
         }
+
+        function testarSomar() {
+            document.getElementById("num1").value = 5;
+            document.getElementById("num2").value = 5;
+
+            somar();
+
+            if (document.getElementById("resultado").innerHTML === "Resultado: 10") {
+                alert(" Teste somar passou!");
+            } else {
+                alert(" Teste somar falhou!");
+            }
+        }
+
+        function testarSubtrair() {
+            document.getElementById("num1").value = 12;
+            document.getElementById("num2").value = 5;
+
+            subtrair();
+
+            if (document.getElementById("resultado").innerHTML === "Resultado: 7") {
+                alert(" Teste subtrair passou!");
+            } else {
+                alert(" Teste subtrair falhou!");
+            }
+        }
+
+        function testarMultiplicar() {
+            document.getElementById("num1").value = 3;
+            document.getElementById("num2").value = 5;
+
+            multiplicar();
+
+            if (document.getElementById("resultado").innerHTML === "Resultado: 15") {
+                alert(" Teste multiplicar passou!");
+            } else {
+                alert(" Teste multiplicar falhou!");
+            }
+        }
+
+        function testarDividir() {
+            document.getElementById("num1").value = 20;
+            document.getElementById("num2").value = 5;
+
+            dividir();
+
+            if (document.getElementById("resultado").innerHTML === "Resultado: 4") {
+                alert(" Teste dividir passou!");
+            } else {
+                alert(" Teste dividir falhou!");
+            }
+        }
+
+        
+
+
     </script>
 </head>
 
@@ -50,7 +107,14 @@
     <button onclick="subtrair()">Subtrair</button>
     <button onclick="multiplicar()">Multiplicar</button>
     <button onclick="dividir()">Dividir</button>
+    <br>
+    <button onclick="testarSomar()">testSom</button>
+    <button onclick="testarSubtrair()">testSub</button>
+    <button onclick="testarMultiplicar()">testMult</button>
+    <button onclick="testarDividir()">testDiv</button>
+
 
     <div id="resultado">Resultado:</div>
 </body>
+
 </html>
