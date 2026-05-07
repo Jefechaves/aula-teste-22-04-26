@@ -1,0 +1,66 @@
+Relatório de falha da calculadora questionável
+
+
+-Bug Campo de e-mail aceita 
+Relatório de falha
+
+Modelo profissional e direto de relatório de falhas (bug report)
+
+Campo Descrição
+Id da falha: Bug 06/05/2026
+
+Título [BUG] : 
+* campo de e-mail aceita formato inválido no cadastro sem o "@";
+* calculadora aceita divisão por zero
+* alerta na página
+* senha visível
+* soma aceita letras
+* cpf, telefone  aceita letras
+
+Data / Hora 06/05/2026 20:45
+
+Reportado por Jeferson – Equipe Front-end
+Ambiente Windows 11 / Chrome 124 / Homologação
+
+Descrição da Falha Campo de e-mail aceita texto inválido (sem "@") e envia o formulário.
+Comportamento Esperado: O campo deve validar e impedir envio com e-mail inválido.
+Passos para Reproduzir 1. Acesse /cadastro2. Preencha os campos3. Use e-mail inválido4. Envie
+Evidências Screenshot, log do console, vídeo curto (se aplicável)
+Severidade Alta
+Reprodutibilidade Sempre ocorre
+
+Descrição da Falha calculadora aceita divisão por zero
+Comportamento Esperado: calculadora não deve aceitar divisão por zero
+Passos para Reproduzir 1. Acesse /calculadora. Preencha os campos1 . Envie
+Evidências Screenshot, log do console, vídeo curto (se aplicável)
+Severidade Alta
+Reprodutibilidade Sempre ocorre
+
+Descrição da Falha alerta de páginas 
+Comportamento Esperado: alerta a cada 15 segundos, atrapalha o uso
+Evidências Screenshot, log do console, vídeo curto (se aplicável)
+Severidade baixa
+Reprodutibilidade Sempre ocorre
+
+Descrição da Falha senha visível 
+Comportamento Esperado: senha deve ser criptografada
+Evidências Screenshot, log do console, vídeo curto (se aplicável)
+Severidade Alta
+Reprodutibilidade Sempre ocorre
+
+Descrição da Falha calculadora aceita letras 
+Comportamento Esperado: deve aceitar apenas números
+Evidências Screenshot, log do console, vídeo curto (se aplicável)
+Severidade Alta
+Reprodutibilidade Sempre ocorre
+
+Descrição da Falha Campo cpf, telefone aceita letras 
+Comportamento Esperado: deve aceitar apenas números
+Passos para Reproduzir 1. Acesse /cadastro2. Preencha os campos3. Use cpf/telefone inválido4. Envie
+Evidências Screenshot, log do console, vídeo curto (se aplicável)
+Severidade Alta
+Reprodutibilidade Sempre ocorre
+
+
+
+Encaminhado para Time de Front-End
